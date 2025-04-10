@@ -1,0 +1,15 @@
+<configuration>
+
+    <!-- Define a ConsoleAppender to log to the console -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%-5level] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Set the root log level to INFO and associate it with the console appender -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+</configuration>
