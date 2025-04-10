@@ -1,19 +1,21 @@
 package listeners.testng;
 
-import DriverFactory.Driver;
-import com.shoppy.com.utils.AllureReportHelper;
-import com.shoppy.com.utils.ScreenshotManager;
+
+import driverFactory.Driver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.IExecutionListener;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import utils.AllureReportHelper;
+import utils.ScreenshotManager;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
 
-import static com.shoppy.com.utils.PropertiesManager.initializeProperties;
-import static com.shoppy.com.utils.PropertiesManager.webConfig;
+import static utils.PropertiesManager.initializeProperties;
+import static utils.PropertiesManager.webConfig;
+
 
 public class TestNGListener implements IExecutionListener, ITestListener {
     private static final Logger logger = LoggerFactory.getLogger(TestNGListener.class);
@@ -29,7 +31,7 @@ public class TestNGListener implements IExecutionListener, ITestListener {
     public void onExecutionStart() {
         logger.info(CYAN + "🚀 TestNG is starting the execution" + RESET);
         initializeProperties();
-        AllureReportHelper.cleanAllureReport();
+       AllureReportHelper.cleanAllureReport();
     }
 
     @Override

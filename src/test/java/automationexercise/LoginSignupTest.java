@@ -11,7 +11,7 @@ import pages.RegistrationSuccessPage;
 
 public class LoginSignupTest {
     //  private WebDriver driver;
-    private Driver WebDriver;
+    public Driver WebDriver;
     HomePage homePage;
     LoginPage login;
     RegistrationPage register;

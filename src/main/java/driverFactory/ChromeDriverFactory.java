@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import static utils.PropertiesManager.webConfig;
 
+
 public class ChromeDriverFactory extends DriverAbstract {
 
 

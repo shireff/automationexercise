@@ -10,7 +10,8 @@ import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 
-import static com.shoppy.com.utils.PropertiesManager.webConfig;
+import static utils.PropertiesManager.webConfig;
+
 
 public class DriverListeners implements WebDriverListener {
 

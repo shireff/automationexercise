@@ -1,4 +1,4 @@
-package com.shoppy.com.utils;
+package utils;
 
 import org.apache.commons.io.FileUtils;
 import java.io.File;
