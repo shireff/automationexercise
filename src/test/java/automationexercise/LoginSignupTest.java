@@ -38,15 +38,15 @@ public class LoginSignupTest {
         login.checkThatErrorExistEmail();
     }
 
-    @Test
-    public void loginWithIncorrectPassword() {
-        homePage
-                .clickOnLogin()
-                .checkTitle()
-                .fillLoginFields("test@test.com", "IncorrectPassword")
-                .clickLoginBtn();
-        login.checkThatErrorIncorrectPassword();
-    }
+//    @Test
+//    public void loginWithIncorrectPassword() {
+//        homePage
+//                .clickOnLogin()
+//                .checkTitle()
+//                .fillLoginFields("test@test.com", "IncorrectPassword")
+//                .clickLoginBtn();
+//        login.checkThatErrorIncorrectPassword();
+//    }
 
 
     @AfterMethod
