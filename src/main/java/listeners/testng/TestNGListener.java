@@ -83,12 +83,18 @@ public class TestNGListener implements IExecutionListener, ITestListener {
             }
         } catch (IllegalAccessException e) {
             logger.error(YELLOW + "⚠️ Failed to get field: " + e.getMessage() + RESET);
-
         }
 
-        assert driver != null;
-        ScreenshotManager.takeScreenshot(driver.get(), result.getName());
+        if (driver == null) {
+            logger.error(RED + "❌ Driver is not initialized. Cannot take screenshot." + RESET);
+            return;
+        }
 
+        try {
+            ScreenshotManager.takeScreenshot(driver.get(), result.getName());
+        } catch (Exception e) {
+            logger.error(RED + "⚠️ Failed to take screenshot: " + e.getMessage() + RESET);
+        }
     }
 
     public void onTestSkipped(ITestResult result) {
